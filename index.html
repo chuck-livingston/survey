@@ -1,18 +1,11 @@
 <html lang="en-US" style= "font-size: 125%;"> 
 <style>
-
-.bold-numbers {
-  font-weight: bold;
-}
-.bold-numbers li {
-  font-weight: bold;
-}
-table {
+ table {
     border-collapse: collapse;
-    width: 90%;
+    width: 100%;
   }
 
-th, td {
+  th, td {
     border: 1px solid black;
     padding: 10px;
     font-size: 1.2em;
@@ -23,7 +16,29 @@ th, td {
   }
 
   td:first-child {
+    width: 20%;
+  }
+
+  ol {
+    padding-left: 20px;
+  }
+
+  ol li {
+    font-weight: normal;
+  }
+
+  ol li::before {
+    content: counter(list-item) ". ";
     font-weight: bold;
+  }
+
+  ol {
+    counter-reset: list-item;
+    list-style-type: none;
+  }
+
+  ol li {
+    counter-increment: list-item;
   }
 </style>
 
